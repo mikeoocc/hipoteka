@@ -4,6 +4,9 @@
  */
 package interfaz;
 
+import java.awt.Color;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Miguel
@@ -16,8 +19,16 @@ public class SignIn extends javax.swing.JFrame {
     public SignIn() {
         initComponents();
         this.setLocationRelativeTo(null);
+        cargarImagenes();
     }
 
+    public void cargarImagenes(){
+        
+    ImageIcon imgThisImg = new ImageIcon("C:\\Users\\Miguel\\Documents\\NetBeansProjects\\hipoteka\\src\\main\\java\\imagenes\\Picsart_24-02-28_19-12-02-305.jpg");
+        imagenFondo.setIcon(imgThisImg);
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,21 +38,247 @@ public class SignIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        fondo = new javax.swing.JPanel();
+        panelFondo = new javax.swing.JPanel();
+        clienteB = new javax.swing.JPanel();
+        clienteTxt = new javax.swing.JLabel();
+        bancoB = new javax.swing.JPanel();
+        bancoTxt = new javax.swing.JLabel();
+        pregunta = new javax.swing.JLabel();
+        imagenFondo = new javax.swing.JLabel();
+        navbar = new javax.swing.JPanel();
+        navbarTxt = new javax.swing.JLabel();
+        exitB = new javax.swing.JPanel();
+        exitTxt = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1130, 628));
+        setMinimumSize(new java.awt.Dimension(1130, 628));
+        setUndecorated(true);
+        setResizable(false);
+
+        fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        panelFondo.setBackground(new java.awt.Color(0, 0, 51));
+
+        clienteB.setBackground(new java.awt.Color(255, 255, 255));
+
+        clienteTxt.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        clienteTxt.setForeground(new java.awt.Color(0, 0, 51));
+        clienteTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clienteTxt.setText("Cliente");
+        clienteTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        clienteTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clienteTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                clienteTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                clienteTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout clienteBLayout = new javax.swing.GroupLayout(clienteB);
+        clienteB.setLayout(clienteBLayout);
+        clienteBLayout.setHorizontalGroup(
+            clienteBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(clienteTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+        );
+        clienteBLayout.setVerticalGroup(
+            clienteBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(clienteTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+
+        bancoB.setBackground(new java.awt.Color(255, 255, 255));
+        bancoB.setForeground(new java.awt.Color(51, 255, 153));
+
+        bancoTxt.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        bancoTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bancoTxt.setText("Banco");
+        bancoTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bancoTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bancoTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bancoTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout bancoBLayout = new javax.swing.GroupLayout(bancoB);
+        bancoB.setLayout(bancoBLayout);
+        bancoBLayout.setHorizontalGroup(
+            bancoBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bancoTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+        );
+        bancoBLayout.setVerticalGroup(
+            bancoBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bancoTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+        );
+
+        pregunta.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        pregunta.setForeground(new java.awt.Color(255, 255, 255));
+        pregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pregunta.setText("¿Qué eres?");
+
+        javax.swing.GroupLayout panelFondoLayout = new javax.swing.GroupLayout(panelFondo);
+        panelFondo.setLayout(panelFondoLayout);
+        panelFondoLayout.setHorizontalGroup(
+            panelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFondoLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(bancoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(clienteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
+            .addGroup(panelFondoLayout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addComponent(pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelFondoLayout.setVerticalGroup(
+            panelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFondoLayout.createSequentialGroup()
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addComponent(pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addGroup(panelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(clienteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bancoB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(124, 124, 124))
+        );
+
+        fondo.add(panelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 470, 380));
+        fondo.add(imagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 68, 1130, 560));
+
+        navbar.setBackground(new java.awt.Color(0, 255, 153));
+        navbar.setMaximumSize(new java.awt.Dimension(1130, 570));
+
+        navbarTxt.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        navbarTxt.setForeground(new java.awt.Color(255, 255, 255));
+        navbarTxt.setText("hipoteka");
+        navbarTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        navbarTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                navbarTxtMouseClicked(evt);
+            }
+        });
+
+        exitB.setBackground(new java.awt.Color(0, 255, 153));
+
+        exitTxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        exitTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitTxt.setText("X");
+        exitTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exitBLayout = new javax.swing.GroupLayout(exitB);
+        exitB.setLayout(exitBLayout);
+        exitBLayout.setHorizontalGroup(
+            exitBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+        );
+        exitBLayout.setVerticalGroup(
+            exitBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout navbarLayout = new javax.swing.GroupLayout(navbar);
+        navbar.setLayout(navbarLayout);
+        navbarLayout.setHorizontalGroup(
+            navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navbarLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(navbarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 791, Short.MAX_VALUE)
+                .addComponent(exitB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        navbarLayout.setVerticalGroup(
+            navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navbarLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(navbarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(navbarLayout.createSequentialGroup()
+                .addComponent(exitB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        fondo.add(navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void navbarTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_navbarTxtMouseClicked
+        Home home = new Home();
+        home.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_navbarTxtMouseClicked
+
+    private void exitTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitTxtMouseClicked
+
+    private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
+        exitB.setBackground(Color.RED);
+    }//GEN-LAST:event_exitTxtMouseEntered
+
+    private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
+        exitB.setBackground(new Color(0, 255, 153));
+    }//GEN-LAST:event_exitTxtMouseExited
+
+    private void clienteTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clienteTxtMouseClicked
+        this.dispose();
+        SignInClient signinC = new SignInClient();
+        signinC.setVisible(true);
+    }//GEN-LAST:event_clienteTxtMouseClicked
+
+    private void clienteTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clienteTxtMouseEntered
+        clienteB.setBackground(new Color(0x99, 0xCC, 0xFF));
+    }//GEN-LAST:event_clienteTxtMouseEntered
+
+    private void clienteTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clienteTxtMouseExited
+        clienteB.setBackground(Color.WHITE);
+    }//GEN-LAST:event_clienteTxtMouseExited
+
+    private void bancoTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bancoTxtMouseEntered
+        bancoB.setBackground(new Color(0x99, 0xCC, 0xFF));
+    }//GEN-LAST:event_bancoTxtMouseEntered
+
+    private void bancoTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bancoTxtMouseExited
+        bancoB.setBackground(Color.WHITE);
+    }//GEN-LAST:event_bancoTxtMouseExited
+
+    private void bancoTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bancoTxtMouseClicked
+        this.dispose();
+        SignInBank signinB = new SignInBank();
+        signinB.setVisible(true);
+    }//GEN-LAST:event_bancoTxtMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +316,17 @@ public class SignIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel bancoB;
+    private javax.swing.JLabel bancoTxt;
+    private javax.swing.JPanel clienteB;
+    private javax.swing.JLabel clienteTxt;
+    private javax.swing.JPanel exitB;
+    private javax.swing.JLabel exitTxt;
+    private javax.swing.JPanel fondo;
+    private javax.swing.JLabel imagenFondo;
+    private javax.swing.JPanel navbar;
+    private javax.swing.JLabel navbarTxt;
+    private javax.swing.JPanel panelFondo;
+    private javax.swing.JLabel pregunta;
     // End of variables declaration//GEN-END:variables
 }

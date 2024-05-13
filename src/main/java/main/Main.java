@@ -4,6 +4,8 @@
  */
 package main;
 
+import interfaz.Home;
+import usuario.Banco;
 import usuario.Cliente;
 
 /**
@@ -13,11 +15,14 @@ import usuario.Cliente;
 public class Main {
     
     private Cliente usuarioActivo;
+    private Banco bancoActivo;
+    private Boolean invitado;
     private static Main myinstance;
     
     public static void main (String [] args){
         
-        
+        Home home = new Home();
+        home.setVisible(true);
         
         
     }
@@ -37,4 +42,27 @@ public class Main {
     public void setUsuarioActivo(Cliente usuarioActivo) {
         this.usuarioActivo = usuarioActivo;
     }
+    
+    public Banco getBanco(){
+        return bancoActivo;
+    }
+    
+    public void setBancoActivo(Banco bancoActivo){
+        this.bancoActivo = bancoActivo;
+    }
+
+    /**
+     * @return the invitado
+     */
+    public Boolean getInvitado() {
+        return invitado;
+    }
+
+    /**
+     * @param invitado the invitado to set
+     */
+    public void setInvitado(Boolean invitado) {
+        this.invitado = invitado;
+    }
+    
 }

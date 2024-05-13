@@ -48,6 +48,7 @@ public class Home extends javax.swing.JFrame {
         exitTxt = new javax.swing.JLabel();
         startB = new javax.swing.JPanel();
         startBTxt = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         heroTxt = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         heroP = new javax.swing.JLabel();
@@ -67,7 +68,7 @@ public class Home extends javax.swing.JFrame {
         navbarTxt.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
         navbarTxt.setForeground(new java.awt.Color(255, 255, 255));
         navbarTxt.setText("hipoteka");
-        navbarTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        navbarTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         exitB.setBackground(new java.awt.Color(0, 255, 153));
 
@@ -153,20 +154,47 @@ public class Home extends javax.swing.JFrame {
 
         getContentPane().add(startB, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 140, 61));
 
-        heroTxt.setFont(new java.awt.Font("Tw Cen MT", 0, 48)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel1.setForeground(new java.awt.Color(0, 0, 51));
+
+        heroTxt.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
         heroTxt.setForeground(new java.awt.Color(255, 255, 255));
         heroTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         heroTxt.setText("La hipoteca más rápida y sencilla");
-        getContentPane().add(heroTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 650, 80));
 
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("en las mejores condiciones");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 410, 50));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(51, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(heroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(99, 99, 99))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(heroTxt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 610, 180));
 
         heroP.setMaximumSize(new java.awt.Dimension(999999999, 9999));
-        getContentPane().add(heroP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1130, 560));
+        getContentPane().add(heroP, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 70, 1131, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -240,6 +268,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel heroP;
     private javax.swing.JLabel heroTxt;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel navbar;
     private javax.swing.JLabel navbarTxt;
     private javax.swing.JPanel startB;

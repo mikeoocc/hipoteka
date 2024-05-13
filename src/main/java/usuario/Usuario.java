@@ -16,6 +16,10 @@ public abstract class Usuario {
     private String pass;
     private int tipo;
     
+    public Usuario() {
+        
+    }
+    
     public Usuario(int id, String nombre, String mail, String pass, int tipo){
         this.id = id;
         this.nombre = nombre;
