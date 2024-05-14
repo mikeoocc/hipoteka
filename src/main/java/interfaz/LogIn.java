@@ -23,6 +23,7 @@ public class LogIn extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         cargarImagenes();
+        
     }
     
     public void cargarImagenes(){
@@ -48,12 +49,14 @@ public class LogIn extends javax.swing.JFrame {
         exitTxt = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jMail = new javax.swing.JTextField();
-        jPass = new javax.swing.JTextField();
         LogInB = new javax.swing.JPanel();
         LogInBTxt = new javax.swing.JLabel();
         SignB = new javax.swing.JPanel();
         SignBTxt = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jPass1 = new javax.swing.JPasswordField();
+        correoLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         imagenFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -132,8 +135,6 @@ public class LogIn extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jMail.setForeground(new java.awt.Color(102, 102, 102));
-        jMail.setText("Correo electrónico");
         jMail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jMail.setOpaque(true);
         jMail.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -144,22 +145,6 @@ public class LogIn extends javax.swing.JFrame {
         jMail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMailActionPerformed(evt);
-            }
-        });
-
-        jPass.setForeground(new java.awt.Color(102, 102, 102));
-        jPass.setText("Contraseña");
-        jPass.setToolTipText("");
-        jPass.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        jPass.setOpaque(true);
-        jPass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPassMousePressed(evt);
-            }
-        });
-        jPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPassActionPerformed(evt);
             }
         });
 
@@ -247,6 +232,14 @@ public class LogIn extends javax.swing.JFrame {
             }
         });
 
+        jPass1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        correoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        correoLabel.setText("Correo electrónico:");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setText("Contraseña:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -254,26 +247,32 @@ public class LogIn extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPass1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(LogInB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(SignB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jPass, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jMail, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(correoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(36, 36, 36)
+                .addComponent(correoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jMail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jPass, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(1, 1, 1)
+                .addComponent(jPass1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LogInB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SignB, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -316,38 +315,25 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_exitTxtMouseExited
 
     private void jMailMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMailMousePressed
+        /*
         if(jMail.getText().equals("Correo electrónico")){
             jMail.setText("");
             jMail.setForeground(Color.black);
         }
-        if(jPass.getText().isEmpty()){
-            jPass.setText("Contraseña");
-            jPass.setForeground(Color.gray);
+        if(jPass1.getText().isEmpty()){
+            jPass1.setText("Contraseña");
+            jPass1.setForeground(Color.gray);
         }
+        */
     }//GEN-LAST:event_jMailMousePressed
 
     private void jMailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMailActionPerformed
 
-    private void jPassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPassMousePressed
-        if(jPass.getText().equals("Contraseña")){
-            jPass.setText("");
-            jPass.setForeground(Color.black);
-        }
-        if(jMail.getText().isEmpty()){
-            jMail.setText("Correo electrónico");
-            jMail.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_jPassMousePressed
-
-    private void jPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPassActionPerformed
-
     private void LogInBTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogInBTxtMouseClicked
         String correo = jMail.getText();
-        String pass = jPass.getText();
+        String pass = jPass1.getText();
         
         if (BaseDatos.getInstance().verificarCredenciales(correo, pass)) { 
             
@@ -358,7 +344,7 @@ public class LogIn extends javax.swing.JFrame {
                 
                 Main.getIntance().setInvitado(false);
                 
-                if(Main.getIntance().getUsuarioActivo().getAporteMaximo().isEmpty()){
+                if(Main.getIntance().getUsuarioActivo().getAporteMaximo()==null){
                     form1 vF1 = new form1();
                     vF1.setVisible(true);
                 }
@@ -461,14 +447,16 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel LogInBTxt;
     private javax.swing.JPanel SignB;
     private javax.swing.JLabel SignBTxt;
+    private javax.swing.JLabel correoLabel;
     private javax.swing.JPanel exitB;
     private javax.swing.JLabel exitTxt;
     private javax.swing.JPanel fondo;
     private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jMail;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jPass;
+    private javax.swing.JPasswordField jPass1;
     private javax.swing.JPanel navbar;
     private javax.swing.JLabel navbarTxt;
     // End of variables declaration//GEN-END:variables

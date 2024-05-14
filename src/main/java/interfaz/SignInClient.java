@@ -34,22 +34,22 @@ public class SignInClient extends javax.swing.JFrame {
     private boolean validarCampos() {
         // Validar nombre
         String nombre = jName.getText();
-        if (!nombre.matches("[a-zA-Z]+")) {
-            JOptionPane.showMessageDialog(this, "El nombre solo debe contener letras", "Error", JOptionPane.ERROR_MESSAGE);
+        if (!nombre.matches(".*[a-zA-Z].*")) {
+            JOptionPane.showMessageDialog(this, "El nombre debe contener al menos una letra", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
         // Validar correo electrónico
         String correo = jMail.getText();
-        if (!correo.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
+        if (!correo.matches("[a-zA-Z0-9._%+-]+@gmail.com")) {
             JOptionPane.showMessageDialog(this, "Ingrese un correo electrónico válido", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
         // Validar contraseña
         String contrasena = jPass.getText();
-        if (contrasena.length() < 8) {
-            JOptionPane.showMessageDialog(this, "La contraseña debe tener al menos 8 caracteres", "Error", JOptionPane.ERROR_MESSAGE);
+        if (contrasena.length() < 8 || contrasena.equals("Contraseña")) {
+            JOptionPane.showMessageDialog(this, "La contraseña debe tener al menos 8 caracteres o ser diferente", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
         

@@ -272,6 +272,9 @@ public class creacionOfertas extends javax.swing.JFrame {
         else if(descOferta.getText().length() < 50){
             JOptionPane.showMessageDialog(this, "Deben de haber al menos 50 caracteres.", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        else if(nombreOferta.getText().length() > 25){
+            JOptionPane.showMessageDialog(this, "El nombre debe ser más corto.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
         else{
             
             String valorVivienda = valorViviendaBox.getSelectedItem().toString();

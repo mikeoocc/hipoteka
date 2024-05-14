@@ -134,7 +134,7 @@ public class vPBanco extends javax.swing.JFrame {
         
         borrarL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                int opcion = JOptionPane.showConfirmDialog(null, "¿Seguro que quieres eliminar?", "Eliminar iferta", JOptionPane.YES_NO_OPTION);
+                int opcion = JOptionPane.showConfirmDialog(null, "¿Seguro que quieres eliminar?", "Eliminar oferta", JOptionPane.YES_NO_OPTION);
                 if (opcion == JOptionPane.YES_OPTION) {
                     BaseDatos.getInstance().eliminarOferta(oferta.getId());
                     getOfertasBanco().remove(oferta);

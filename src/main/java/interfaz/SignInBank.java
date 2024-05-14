@@ -39,14 +39,14 @@ public class SignInBank extends javax.swing.JFrame {
 
         // Validar correo electrónico
         String correo = jMail.getText();
-        if (!correo.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
+        if (!correo.matches("[a-zA-Z0-9._%+-]+@gmail.com")) {
             JOptionPane.showMessageDialog(this, "Ingrese un correo electrónico válido", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
         // Validar contraseña
         String contrasena = jPass.getText();
-        if (contrasena.length() < 8) {
+        if (contrasena.length() < 8 && !contrasena.equals("Contraseña")) {
             JOptionPane.showMessageDialog(this, "La contraseña debe tener al menos 8 caracteres", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }

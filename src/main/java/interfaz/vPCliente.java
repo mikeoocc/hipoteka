@@ -123,7 +123,7 @@ public class vPCliente extends javax.swing.JFrame {
         JLabel salario1 = new JLabel("Salario:");
         JLabel salario2 = new JLabel(oferta.getSalario());
         
-        JLabel aporteMaximo1 = new JLabel("Aporte máximo:");
+        JLabel aporteMaximo1 = new JLabel("Aporte mínimo:");
         JLabel aporteMaximo2 = new JLabel(oferta.getAporteMaximo());
         
         JPanel favorito = new JPanel();
@@ -149,10 +149,6 @@ public class vPCliente extends javax.swing.JFrame {
         favorito.add(favoritoL);
         
         //Boolean yaClickeado0;
-        
-        if(Main.getIntance().getInvitado()==false){
-            System.out.println("Soy false!");
-        }
         
         if(Main.getIntance().getInvitado()==false){
             if(BaseDatos.getInstance().verificarFavorito(oferta.getId(), Main.getIntance().getUsuarioActivo().getId()) == true){
