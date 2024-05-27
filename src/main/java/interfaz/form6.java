@@ -29,7 +29,7 @@ public class form6 extends javax.swing.JFrame {
     
     public void cargarImagenes(){
 
-        ImageIcon imgThisImg = new ImageIcon("C:\\Users\\Miguel\\Documents\\NetBeansProjects\\hipoteka\\src\\main\\java\\imagenes\\Picsart_24-02-28_19-12-02-305.jpg");
+        ImageIcon imgThisImg = new ImageIcon(getClass().getResource("/imgs/Picsart_24-02-28_19-12-02-305.jpg"));
         imgFondo.setIcon(imgThisImg);
         
     }

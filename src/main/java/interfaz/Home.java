@@ -28,7 +28,7 @@ public class Home extends javax.swing.JFrame {
     
     public void cargarImagenes(){
 
-        ImageIcon imgThisImg = new ImageIcon("C:\\Users\\Miguel\\Documents\\NetBeansProjects\\hipoteka\\src\\main\\java\\imagenes\\05_z-1.jpg");
+        ImageIcon imgThisImg = new ImageIcon(getClass().getResource("/imgs/05_z-1.jpg"));
         heroP.setIcon(imgThisImg);
         
     }

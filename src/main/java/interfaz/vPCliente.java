@@ -44,21 +44,21 @@ public class vPCliente extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         String rutaAbsoluta3 = "src\\main\\java\\imagenes\\usuario.pg.png";
-        ImageIcon usuarioIcon = new ImageIcon(rutaAbsoluta3);
+        ImageIcon usuarioIcon = new ImageIcon(getClass().getResource("/imgs/usuario.pg.png"));
         Image image = usuarioIcon.getImage();
         Image newimg = image.getScaledInstance(30, 30,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
         usuarioIcon = new ImageIcon(newimg);
         usuarioB.setIcon(usuarioIcon);
         
         String rutaAbsoluta4 = "src\\main\\java\\imagenes\\pHistory.png";
-        ImageIcon favoritosIcon = new ImageIcon(rutaAbsoluta4);
+        ImageIcon favoritosIcon = new ImageIcon(getClass().getResource("/imgs/pHistory.png"));
         Image image4 = favoritosIcon.getImage();
         Image newimg4 = image4.getScaledInstance(35, 35,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
         favoritosIcon = new ImageIcon(newimg4);
         favoritos.setIcon(favoritosIcon);
         
         String rutaAbsoluta5 = "src\\main\\java\\imagenes\\filtroOfe.png";
-        ImageIcon filtroOfer = new ImageIcon(rutaAbsoluta5);
+        ImageIcon filtroOfer = new ImageIcon(getClass().getResource("/imgs/filtroOfe.png"));
         Image image5 = filtroOfer.getImage();
         Image newimg5 = image5.getScaledInstance(35, 35,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
         filtroOfer = new ImageIcon(newimg5);

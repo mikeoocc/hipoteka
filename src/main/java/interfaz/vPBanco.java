@@ -40,8 +40,7 @@ public class vPBanco extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-        String rutaAbsoluta3 = "src\\main\\java\\imagenes\\usuario.pg.png";
-        ImageIcon usuarioIcon = new ImageIcon(rutaAbsoluta3);
+        ImageIcon usuarioIcon = new ImageIcon(getClass().getResource("/imgs/usuario.pg.png"));
         Image image = usuarioIcon.getImage();
         Image newimg = image.getScaledInstance(30, 30,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
         usuarioIcon = new ImageIcon(newimg);
